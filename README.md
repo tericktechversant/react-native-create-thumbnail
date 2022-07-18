@@ -39,33 +39,33 @@ iOS/Android thumbnail generator with support for both local and remote videos. `
 import { createThumbnail } from "react-native-create-thumbnail";
 
 createThumbnail({
-  url: '<path to video file>',
+  url: "<path to video file>",
   timeStamp: 10000,
 })
-  .then(response => console.log({ response }))
-  .catch(err => console.log({ err }));
+  .then((response) => console.log({ response }))
+  .catch((err) => console.log({ err }));
 ```
 
 ## Request Object
 
-| Property  |           Type            | Description                                                               |
-| --------- | :-----------------------: | :------------------------------------------------------------------------ |
-| url       |    `String` (required)    | Path to video file (local or remote)                                      |
-| timeStamp |  `Number` (default `0`)   | Thumbnail timestamp (in milliseconds)                                     |
-| format    | `String` (default `jpeg`) | Thumbnail format, can be one of: `jpeg`, or `png`                         |
-| dirSize   | `Number` (default `100`)  | Maximum size of the cache directory (in megabytes). When this directory is full, the previously generated thumbnails will be deleted to clear about half of it's size.                        |
-| headers   |         `Object`          | Headers to load the video with. e.g. `{ Authorization: 'someAuthToken' }` |
-| cacheName   |         `String` (optional)          | Cache name for this thumbnail to avoid duplicate generation. If specified, and a thumbnail already exists with the same cache name, it will be returned instead of generating a new one. |
+| Property  |           Type            | Description                                                                                                                                                                              |
+| --------- | :-----------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| url       |    `String` (required)    | Path to video file (local or remote)                                                                                                                                                     |
+| timeStamp |  `Number` (default `0`)   | Thumbnail timestamp (in milliseconds)                                                                                                                                                    |
+| format    | `String` (default `jpeg`) | Thumbnail format, can be one of: `jpeg`, or `png`                                                                                                                                        |
+| dirSize   | `Number` (default `100`)  | Maximum size of the cache directory (in megabytes). When this directory is full, the previously generated thumbnails will be deleted to clear about half of it's size.                   |
+| headers   |         `Object`          | Headers to load the video with. e.g. `{ Authorization: 'someAuthToken' }`                                                                                                                |
+| cacheName |    `String` (optional)    | Cache name for this thumbnail to avoid duplicate generation. If specified, and a thumbnail already exists with the same cache name, it will be returned instead of generating a new one. |
 
 ## Response Object
 
-| Property |   Type   | Description                 |
-| -------- | :------: | :-------------------------- |
-| path     | `String` | Path to generated thumbnail |
-| size     | `Number` | Size (in bytes) of thumbnail|
-| mime     | `String` | Mimetype of thumbnail       |
-| width    | `Number` | Thumbnail width             |
-| height   | `Number` | Thumbnail height            |
+| Property |   Type   | Description                  |
+| -------- | :------: | :--------------------------- |
+| path     | `String` | Path to generated thumbnail  |
+| size     | `Number` | Size (in bytes) of thumbnail |
+| mime     | `String` | Mimetype of thumbnail        |
+| width    | `Number` | Thumbnail width              |
+| height   | `Number` | Thumbnail height             |
 
 #### Notes
 
@@ -89,3 +89,4 @@ READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE
 #### Maintenance Status
 
 **Active:** Bug reports, feature requests and pull requests are welcome.
+"terick testing fork"
